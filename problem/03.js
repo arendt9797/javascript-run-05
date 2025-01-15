@@ -11,6 +11,20 @@
  * @returns {Function} - calc(op, num)
  */
 
-function closureWithParams() {}
+function closureWithParams() {
+    const calc = (op, num) => {
+        let base = 10
+        if (op === '+') {
+            base += num
+        } else if (op === '-') {
+            base -= num
+        } else {
+            return 'invalid'
+        }
+        return base
+    }
+    
+    return calc
+}
 
 export { closureWithParams };
